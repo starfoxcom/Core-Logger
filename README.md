@@ -15,7 +15,11 @@ A simple and efficient Flutter package that provides a singleton logger wrapper 
 
 ## Getting started
 
-Since this is a local package, add it to your project's `pubspec.yaml` file using a local path dependency:
+Since this is a local package not published to pub.dev, you can add it to your project using either a local path dependency or a git dependency:
+
+### Option 1: Local Path Dependency
+
+Add it to your project's `pubspec.yaml` file using a local path:
 
 ```yaml
 dependencies:
@@ -23,6 +27,20 @@ dependencies:
     sdk: flutter
   core_logger:
     path: ../path/to/core_logger  # Update with the actual path to this package
+```
+
+### Option 2: Git Dependency
+
+Add it to your project's `pubspec.yaml` file using the git repository:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  core_logger:
+    git:
+      url: https://github.com/starfoxcom/Core-Logger.git
+      # ref: main  # Optional: specify a branch, tag, or commit
 ```
 
 Then run:
