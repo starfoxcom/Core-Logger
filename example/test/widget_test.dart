@@ -11,8 +11,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('CoreLogger Example Widget Tests', () {
-    setUp(() async {
-      // Initialize CoreLogger before each test
+    setUpAll(() async {
+      // Initialize CoreLogger before running the tests
       await CoreLogger.initialize();
     });
 

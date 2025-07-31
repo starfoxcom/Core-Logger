@@ -2,7 +2,7 @@
 
 A simple and efficient Flutter package that provides a singleton logger wrapper around the popular `logger` package. Core Logger offers a clean, easy-to-use interface for logging throughout your Flutter application with consistent formatting and multiple log levels.
 
-> **Note**: This is a local package not published to pub.dev. Use the local path dependency method to include it in your projects.
+> **Note**: This is a local package not published to pub.dev. Use the local path dependency or git dependency method to include it in your projects.
 
 ## Features
 
@@ -102,14 +102,46 @@ class MyService {
 }
 ```
 
+You can also use the logger directly without assigning it to a variable, due to the singleton nature of the `CoreLogger` class:
+
+```dart
+import 'package:core_logger/core_logger.dart';
+
+class MyService {
+  void performOperation() {
+    // Log information
+    CoreLogger().info('Starting operation');
+
+    try {
+      // Your code here
+      CoreLogger().success('Operation completed successfully');
+    } catch (error, stackTrace) {
+      // Log errors with optional error details and stack trace
+      CoreLogger().error('Operation failed', error, stackTrace);
+    }
+  }
+
+  void checkStatus() {
+    // Log warnings
+    CoreLogger().warning('This is a warning message');
+
+    // Log trace information for debugging
+    CoreLogger().trace('Debug trace information');
+
+    // Log fatal errors
+    CoreLogger().fatal('Critical system error');
+  }
+}
+```
+
 ### Available Log Levels
 
-- `logger.info(message, [response])` - Information messages
-- `logger.error(message, [error, stackTrace])` - Error messages
-- `logger.warning(message, [response])` - Warning messages
-- `logger.fatal(message, [response, stackTrace])` - Fatal error messages
-- `logger.trace(message, [response, stackTrace])` - Trace/debug messages
-- `logger.success(message, [response])` - Success messages
+- `logger.info(message, [additionalContext])` - Information messages
+- `logger.error(message, [additionalErrorContext])` - Error messages
+- `logger.warning(message, [additionalErrorContext])` - Warning messages
+- `logger.fatal(message, [additionalErrorContext])` - Fatal error messages
+- `logger.trace(message, [additionalContext])` - Trace/debug messages
+- `logger.success(message, [additionalContext])` - Success messages
 
 ## Additional information
 
