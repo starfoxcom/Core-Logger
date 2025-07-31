@@ -1,6 +1,6 @@
 name: core_logger
-description: "A new Flutter package project."
-version: 1.1.0
+description: "A simple and efficient Flutter package that provides a singleton logger wrapper around the popular logger package with multiple log levels and pretty printing."
+version: 1.1.1
 publish_to: 'none'
 
 environment:

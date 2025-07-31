@@ -161,6 +161,13 @@ Since this is a local package, you can:
 3. **Modify it** to suit your specific logging needs
 4. **Version control** it alongside your project or as a separate repository
 
+### Example App
+
+Check out the `/example` folder for a complete Flutter application demonstrating all CoreLogger features, including:
+
+- Initialization setup
+- All log methods (info, success, warning, error, trace, fatal)
+
 ### Contributing
 
 If you're using this package and want to contribute improvements:
