@@ -8,7 +8,7 @@ A simple and efficient Flutter package that provides a singleton logger wrapper 
 
 - **Singleton Pattern**: Access the same logger instance throughout your entire application
 - **Multiple Log Levels**: Support for info, error, warning, fatal, trace, and success messages
-- **Built on Logger Package**: Leverages the robust and popular `logger` package
+- **Built on Logger Package**: Leverages the robust and popular [logger](https://pub.dev/packages/logger) package
 - **Pretty Printing**: Formatted console output with colors and emojis for better readability
 - **Easy Integration**: Simple initialization and usage with minimal setup
 - **Type Safety**: Full Dart type safety with optional parameters for error objects and stack traces
