@@ -6,7 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:core_logger/core_logger.dart';
-import 'package:example/main.dart';
+import 'package:core_logger_example/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
